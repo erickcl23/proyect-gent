@@ -1,38 +1,369 @@
-.App {
+/* Eliminar subrayado de todos los enlaces */
+a {
+  text-decoration: none;
+  position: relative;
+  color: inherit; /* Mantiene el color del texto sin cambios */
+}
+
+/* Puedes añadir más estilos globales aquí */
+
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Carrusel */
+.carousel-item img {
+  width: 70%; /* Ajusta este valor para reducir el tamaño del carrusel */
+  height: auto;
+  margin: 0 auto; /* Centrar imagen */
+}
+
+.carousel-caption {
+  font-size: 2rem; /* Ajusta el tamaño del texto en las descripciones */
+}
+.carousel-caption p {
+  color: black;
+}
+.carousel-caption h3 {
+  font-size: 1.2rem; /* Ajusta el tamaño de los títulos en el carrusel */
+}
+
+
+/* Tarjetas */
+
+
+.custom-card {
+  position: relative;
+  overflow: hidden;
+  border: none; /* Sin bordes */
+  transition: transform 0.3s ease-in-out; /* Efecto de movimiento al hacer hover */
+  width: 350px; /* Reduce el tamaño de las tarjetas */
+  height: 500px; /* Ajuste de altura */
+  margin: 50px 50px; /* Separación entre las tarjetas */  
+  
+}
+.custom-card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la tarjeta cuando pasas el mouse */
+}
+.card-overlay {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card-overlay img {
+  transition: transform 0.5s ease; /* Efecto de desplazamiento */
+}
+
+.custom-card:hover img {
+  transform: scale(1.1); /* Zoom de la imagen cuando pasas el mouse */
+}
+.row {
+  justify-content: center; /* Asegura que las tarjetas estén centradas en su contenedor */
+  
+}
+.card img {
+  height: 490px; /* Ajusta la altura de las imágenes para que sean uniformes */
+  width: 350px; /* Reduce el tamaño de las tarjetas */
+  object-fit: cover; /* Asegura que las imágenes mantengan su proporción sin deformarse */
+}
+
+.card-title-overlay {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Transición para que el texto aparezca suavemente */
+  background: rgba(255, 255, 255, 0.2); /* Fondo translúcido tipo "vidrio" */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+  padding: 10px;
+}
+.custom-card:hover .card-title-overlay {
+  opacity: 1; /* Muestra el título al pasar el mouse */
+}
+.card-text {
+  font-size: 0.85rem; /* Ajusta el tamaño del texto de las tarjetas */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media (max-width: 768px) {
+  /* Para pantallas pequeñas */
+  .carousel-item img {
+    width: 100%; /* Carrusel al 100% en pantallas pequeñas */
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .card {
+    width: 90%; /* Tarjetas más grandes en pantallas pequeñas */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.about-section {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+}
+
+.about-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+.breadcrum {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5e5e5e;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 60px 279px;
+  text-transform: capitalize;
+}
+
+.descriptionbox {
+  margin: 120px 170px;
+}
+.description-navigator {
+  display: flex;
+}
+.description-nav-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  width: 171px;
+  height: 70px;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+}
+.description-nav-box.fade {
+  background: #FBFBFB;
+  color: #555555;
+}
+.descriptionbox-description {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid #D0D0D0;
+  padding: 48px;
+  padding-bottom: 70px;
+}
+.descriptionbox-description h1 {
+  font-size: 30px;
+}
+.descriptionbox-description h2 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.descriptionbox-description p {
+  font-size: 15px;
+  font-weight: 600;
+}.descriptionbox-description ul li {
+  font-size: 15px;
+  font-weight: 700;
+}
+.descriptionbox-description ul {
+  color: red;
+}
+
+
+.productdisplay {
+  display: flex;
+  margin: 0px 260px;
+}
+.productdisplay-left {
+  display: flex;
+  gap: 17px;
+  
+}
+.productdisplay-img-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* justify-content: flex-end; */
+}
+.productdisplay-img-list img {
+  
+  height: 115px;
+}
+.productdisplay-main-img {
+  width: 566px;
+
+}
+.productdisplay-right {
+  margin: 0px 70px 100px;
+  display: flex;
+  flex-direction: column;
+  
+  /* padding: 10px;
+  border: 2px solid #ccc; */
+}
+.productdisplay-right h1 {
+  color: #3d3d3d;
+  font-size: 40px;
+  font-weight: 700;
+}
+.productdisplay-right-off {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #1c1c1c;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff4141;
+}
+.productdisplay-right-prices {
+  display: flex;
+  margin: 20px 0px;
+  gap: 30px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.productdisplay-right-price-old {
+  color: #818181;
+  text-decoration: line-through ;
+}
+.productdisplay-right-price-new {
+  color: black;
+}
+.productdisplay-right-cuotas {
+  font-weight: bold;
+  font-size: 18px;
+}
+.productdisplay-right-cuotas span {
+  color: #ff4141;
+}
+.productdisplay-right-sabor h1{
+  margin-top: 5px;
+  color: #000000;
+  font-size: 30px;
+  font-weight: 6700;
+}
+.productdisplay-right-selected {
+  font-size: 16px;
+}
+.productdisplay-right-selected span {
+  font-weight: bold;
+  color: #000000;
+}
+.productdisplay-right-selected p {
+  color: #818181;
+}
+.sabores-options {
+  display: flex;
+/*     margin: 10px 0px 0px 0px; */
+  flex-wrap: wrap; /* Permitir que los botones se envuelvan si es necesario */
+  gap: 5px; /* Asegurar un espacio entre los botones */
+  
+}
+.flavor-button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  font-size: 15px;
+  white-space: nowrap; /* Evitar que el texto se corte */
+}
+.flavor-button:hover {
+  background-color: #e0e0e0;
+}
+.productdisplay-right-conteo-and-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+
+}
+.productdisplay-right-conteo {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  /* justify-content: center;
+  margin: 20px 0; */
+  padding: 10px 20px;
+}
+.productdisplay-right-conteo button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 10px;
+}
+.productdisplay-right-box-conteo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 40px;
+  
+  margin: 0 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+
+}
+.productdisplay-right-add-to-cart {
+  margin-left: 10px; /* Asegurar un margen entre los botones */
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.productdisplay-right-add-to-cart button {
+  padding: 20px 40px;
+  width: 180%;
+  background-color: black;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  outline: none;
+}
+.productdisplay-right-add-to-cart button:hover {
+  background-color: #333;
+}
+
+.relatedproducts {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  height: 90vh;
 }
-
-.App-link {
-  color: #61dafb;
+.relatedproducts h1 {
+  color: #171717;
+  font-size: 50px;
+  font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.relatedproducts hr {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background: #252525;
+}
+.relatedproducts-item {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  
 }
