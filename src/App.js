@@ -7,6 +7,7 @@ import Carousel  from './componentes/Caresul/CarouselFadeExample.jsx';
 import Tarjetas  from './componentes/grid/GridExample.jsx';
 import AboutSection from './componentes/AboutSection/AboutSection.jsx';
 import ProductPage from './pages/ProductPage.jsx';
+import FooterComponent from './components/footerComponent.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Tarjetas />
       <AboutSection />
       <ProductPage />
+      <FooterComponent/>
       <Routes>
         <Route path='/' element/>
         <Route path='/' element/>

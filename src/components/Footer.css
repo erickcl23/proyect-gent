@@ -1,0 +1,33 @@
+
+.list{
+    list-style: none;
+    
+}
+
+.footer {
+    background-color: #9b9494db;
+    padding: 20px;
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    color: rgb(218, 216, 216);
+    
+  }
+  
+  .column {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: left;
+
+  }
+  
+  .footer a {
+    color: rgb(218, 216, 216);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #44484b;
+  }
+

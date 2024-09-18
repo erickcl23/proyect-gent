@@ -1,29 +1,21 @@
-import React from 'react'
+import React from 'react';
+import FormComponent from '../Components/formComponent';
+import FooterComponent from '../components/footerComponent';
+import '../Screens/user.css'
 
-const bdScreen = () => {
-  return (
 
-    <div>
-        <header>
-        <nav>
-            <ul>
-                <li>soy un header</li>
-            </ul>
-        </nav>
-        </header>
-        <main>
-    <h1>soy el body</h1>
-        </main>
-        <footer>
-            <a href="">Footer</a>
-            <a href="">footer2</a>
-            <a href="">footer3</a>
-        </footer>
+function BdScreen() {
+    return (
+        <div>
+           <h1>Base de Datos</h1>
+           <fieldset className='fieldset'>
+            <h2>Vista indefinida</h2>
+           </fieldset>
 
-    </div>
 
-  )
+          
+        </div>
+    );
 }
 
-
-export default bdScreen;
+export default BdScreen;
