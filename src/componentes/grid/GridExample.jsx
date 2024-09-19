@@ -17,20 +17,20 @@ const cardData = [
 
 
 const Tarjetas = () => (
-  <Row xs={1} md={4} className="g-2 d-flex justify-content-center"> 
+  <div className="custom-row">
     {cardData.map((card, idx) => (
       <Col key={idx}>
         <Card className="custom-card">
-          <div className="card-overlay"> {/* Overlay para el efecto vidrio */}
+          <div className="card-overlay">
             <Card.Img variant="top" src={card.imgSrc} alt={card.title} />
-            <div className="card-title-overlay"> {/* Título visible al hacer hover */}
+            <div className="card-title-overlay">
               <h3>{card.title}</h3>
             </div>
           </div>
         </Card>
       </Col>
     ))}
-  </Row>
+  </div>
 );
 
 export default Tarjetas;

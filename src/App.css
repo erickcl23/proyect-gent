@@ -34,40 +34,50 @@ body {
 
 /* Tarjetas */
 
+.custom-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
+  grid-gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centrar las tarjetas horizontalmente */
+  align-items: center; /* Alinear verticalmente */
+  padding: 50px; /* Espaciado alrededor del contenedor */
+  max-width: 1000px; /* Limitar el ancho máximo */
+  margin: 0 auto; /* Centrar el contenedor */
+}
 
+/* Estilo para tarjetas */
 .custom-card {
   position: relative;
   overflow: hidden;
-  border: none; /* Sin bordes */
-  transition: transform 0.3s ease-in-out; /* Efecto de movimiento al hacer hover */
-  width: 350px; /* Reduce el tamaño de las tarjetas */
-  height: 500px; /* Ajuste de altura */
-  margin: 50px 50px; /* Separación entre las tarjetas */  
-  
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  width: 350px;
+  height: 500px;
+  margin: 0;
 }
+
 .custom-card:hover {
-  transform: scale(1.05); /* Aumenta el tamaño de la tarjeta cuando pasas el mouse */
+  transform: scale(1.05);
 }
+
 .card-overlay {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
 }
+
 .card-overlay img {
-  transition: transform 0.5s ease; /* Efecto de desplazamiento */
+  transition: transform 0.5s ease;
 }
 
 .custom-card:hover img {
-  transform: scale(1.1); /* Zoom de la imagen cuando pasas el mouse */
+  transform: scale(1.1);
 }
-.row {
-  justify-content: center; /* Asegura que las tarjetas estén centradas en su contenedor */
-  
-}
+
 .card img {
-  height: 490px; /* Ajusta la altura de las imágenes para que sean uniformes */
-  width: 350px; /* Reduce el tamaño de las tarjetas */
-  object-fit: cover; /* Asegura que las imágenes mantengan su proporción sin deformarse */
+  height: 490px;
+  width: 350px;
+  object-fit: cover;
 }
 
 .card-title-overlay {
@@ -80,28 +90,76 @@ body {
   font-size: 1.5rem;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* Transición para que el texto aparezca suavemente */
-  background: rgba(255, 255, 255, 0.2); /* Fondo translúcido tipo "vidrio" */
-  backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+  transition: opacity 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.2); /* Efecto translúcido */
+  backdrop-filter: blur(10px);
   padding: 10px;
 }
+
 .custom-card:hover .card-title-overlay {
-  opacity: 1; /* Muestra el título al pasar el mouse */
+  opacity: 1;
 }
+
 .card-text {
-  font-size: 0.85rem; /* Ajusta el tamaño del texto de las tarjetas */
+  font-size: 0.85rem;
 }
 
-@media (max-width: 768px) {
-  /* Para pantallas pequeñas */
-  .carousel-item img {
-    width: 100%; /* Carrusel al 100% en pantallas pequeñas */
+/* Media Queries para dispositivos más pequeños */
+
+/* Pantallas medianas (tablets y dispositivos entre 768px y 1024px) */
+@media (max-width: 1024px) {
+  .custom-row {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    max-width: 700px; /* Limitar el ancho del contenedor */
   }
 
-  .card {
-    width: 90%; /* Tarjetas más grandes en pantallas pequeñas */
+  .custom-card {
+    width: 300px; /* Reducir el tamaño de las tarjetas */
+    height: 450px;
+  }
+
+  .card img {
+    height: 440px; /* Ajustar la imagen al nuevo tamaño */
+    width: 300px;
   }
 }
+
+/* Pantallas pequeñas (smartphones entre 480px y 767px) */
+@media (max-width: 767px) {
+  .custom-row {
+    grid-template-columns: repeat(1, 1fr); /* 1 columna en pantallas pequeñas */
+    max-width: 350px;
+  }
+
+  .custom-card {
+    width: 100%; /* Las tarjetas ocupan el ancho completo en pantallas pequeñas */
+    height: auto; /* Ajustar la altura automáticamente */
+  }
+
+  .card img {
+    width: 100%; /* Ajustar la imagen para que ocupe el ancho de la tarjeta */
+    height: auto; /* La altura se ajusta automáticamente */
+  }
+}
+
+/* Pantallas extra pequeñas (menor a 480px, como teléfonos pequeños) */
+@media (max-width: 480px) {
+  .custom-row {
+    grid-template-columns: 1fr; /* 1 columna */
+    padding: 20px; /* Reducir el padding para pantallas más pequeñas */
+  }
+
+  .custom-card {
+    width: 100%; /* Las tarjetas ocupan el 100% del ancho */
+    height: auto;
+  }
+
+  .card img {
+    width: 100%; /* La imagen también ocupa el ancho completo */
+    height: auto;
+  }
+}
+
 
 
 .about-section {
