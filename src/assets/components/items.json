@@ -1,0 +1,71 @@
+{
+    "indumentaria": [
+        {
+            "id": "i-001",
+            "name": "Nombre indumentaria 1",
+            "img": "",
+            "description": "Descripción de indumentaria 1",
+            "price": 10
+        },
+        {
+            "id": "i-002",
+            "name": "Nombre indumentaria 2",
+            "img": "",
+            "description": "Descripción de indumentaria 2",
+            "price": 20
+        },
+        {
+            "id": "i-003",
+            "name": "Nombre indumentaria 3",
+            "img": "",
+            "description": "Descripción de indumentaria 3",
+            "price": 30
+        }
+    ],
+    "accesorios": [
+        {
+            "id": "a-001",
+            "name": "Nombre accesorio 1",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQympif8AmyX76g1TLRI5wCIAJ0CXz4j_A2og&s",
+            "description": "Descripción de accesorio 1",
+            "price": 100
+        },
+        {
+            "id": "a-002",
+            "name": "Nombre accesorio 2",
+            "img": "https://image.jimcdn.com/app/cms/image/transf/none/path/sca6111e44afa757a/image/i2c12c5403cb1c025/version/1414853161/image.jpg",
+            "description": "Descripción de accesorio 2",
+            "price": 200
+        },
+        {
+            "id": "a-003",
+            "name": "Nombre accesorio 3",
+            "img": "https://http2.mlstatic.com/D_NQ_NP_835276-MLA69817641895_062023-O.webp",
+            "description": "Descripción de accesorio 3",
+            "price": 300
+        }
+    ],
+    "suplementos": [
+        {
+            "id": "s-001",
+            "name": "Nombre suplemento 1",
+            "img": "",
+            "description": "Descripción de sumplemento 1",
+            "price": 1000
+        },
+        {
+            "id": "s-002",
+            "name": "Nombre suplemento 2",
+            "img": "",
+            "description": "Descripción de sumplemento 2",
+            "price": 2000
+        },
+        {
+            "id": "s-003",
+            "name": "Nombre suplemento 3",
+            "img": "",
+            "description": "Descripción de sumplemento 3",
+            "price": 3000
+        }
+    ]
+}

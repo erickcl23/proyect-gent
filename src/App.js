@@ -1,29 +1,15 @@
-/* import logo from './logo.svg'; */
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Footer from './componentes/Footer/Footer';
-import ProductPage from './pages/ProductPage.jsx';
-import FooterComponent from './components/footerComponent.jsx';
-import Navigation from './navigation.jsx';
+import { BrowserRouter as Router } from 'react-router-dom';
+import FooterComponent from './assets/components/footerComponent.jsx'
+import Routes from './navigation/Routes.jsx';
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <Navigation />
-      <ProductPage />
-      <FooterComponent/>
-      <Routes>
-        <Route path='/' element/>
-        <Route path='/' element/>
-        <Route path='/' element/>
-        <Route path='/' element/>
-        <Route path='/' element/>
-        <Route path='/' element/>
-        <Route path='/product/:productid' element={<ProductPage/>} />
-      </Routes>
-      <Footer />
-    </Router>
+    <>
+      <Router>
+        <Routes />
+        <FooterComponent />
+      </Router>
+    </>
   );
 }
-
-export default App;

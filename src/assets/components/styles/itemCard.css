@@ -1,0 +1,23 @@
+.cardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -10px;
+}
+
+.card{
+    display: block;
+    border: 1px solid black;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+.card-img-top{
+    padding: 10px;
+}

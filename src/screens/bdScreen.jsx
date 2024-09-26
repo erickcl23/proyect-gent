@@ -1,6 +1,5 @@
 import React from 'react';
-import FormComponent from '../Components/formComponent';
-import FooterComponent from '../components/footerComponent';
+// import FormComponent from '../Components/formComponent';
 import '../Screens/user.css'
 
 
@@ -9,7 +8,7 @@ function BdScreen() {
         <div>
            <h1>Base de Datos</h1>
            <fieldset className='fieldset'>
-            <h2>Vista indefinida</h2>
+                <h2>Vista indefinida</h2>
            </fieldset>
 
 

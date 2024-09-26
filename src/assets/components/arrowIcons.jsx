@@ -1,7 +1,7 @@
 import React from 'react';
-import arrow_icon from '../../frontend_assets/dropdown_icon.png';
+import arrow_icon from '../imgs/dropdown_icon.png';
 
-const Breadcrum = ({ product }) => {
+const ArrowIcons = ({ product }) => {
   return (
     <div className='breadcrum'>
       <span>INICIO</span> 
@@ -13,4 +13,4 @@ const Breadcrum = ({ product }) => {
   );
 };
 
-export default Breadcrum;
+export default ArrowIcons;

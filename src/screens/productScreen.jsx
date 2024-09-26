@@ -1,8 +1,8 @@
 import React from 'react';
-import Breadcrum from '../componentes/Breadcrum/Breadcrum';
-import ProductDisplay from '../componentes/ProductDisplay/ProductDisplay';
-import DescriptionBox from '../componentes/DescriptionBox/DescriptionBox';
-import RelatedProducts from '../componentes/RelatedProducts/RelatedProducts';
+import ArrowIcons from '../assets/components/arrowIcons';
+import ProductDetails from '../assets/components/ProductDetails';
+import ProductInstructions from '../assets/components/productInstructions';
+import RelatedProductsCarrusel from '../assets/components/RelatedProductsCarrusel';
 
 const product = {
   name: 'Nombre del Producto',
@@ -17,15 +17,15 @@ const relatedProducts = [
   { id: 3, name: 'Producto Relacionado 3', image: 'https://via.placeholder.com/100', price: 140 },
 ];
 
-const ProductPage = () => {
+const ProductScreen = () => {
   return (
     <div className='product-page'>
-      <Breadcrum product={product} />
-      <ProductDisplay product={product} />
-      <DescriptionBox />
-      <RelatedProducts products={relatedProducts} />
+      <ArrowIcons product={product} />
+      <ProductDetails product={product} />
+      <ProductInstructions />
+      <RelatedProductsCarrusel products={relatedProducts} />
     </div>
   );
 };
 
-export default ProductPage;
+export default ProductScreen;

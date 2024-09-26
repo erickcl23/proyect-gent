@@ -1,6 +1,10 @@
+//-------------------------------
+//Descripcion de uso de producto
+//[incluir ¿?]
+//--------------------------------
 import React, { useState } from 'react';
 
-const DescriptionBox = () => {
+const ProductInstructions = () => {
   const [selectedTab, setSelectedTab] = useState('description');
 
   const renderContent = () => {
@@ -53,4 +57,4 @@ return (
 );
 };
 
-export default DescriptionBox;
+export default ProductInstructions;

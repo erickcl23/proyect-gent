@@ -1,6 +1,6 @@
 import React from 'react';
-import FormComponent from '../Components/formComponent';
-import FooterComponent from '../components/footerComponent';
+import FormComponent from '../assets/components/formComponent';
+import FooterComponent from '../assets/components/footerComponent';
 import ContactoComponent from '../Components/ContactoComponent';
 
 
@@ -22,7 +22,7 @@ function CompraScreen() {
            
 
             <footer>
-        
+                <FooterComponent/>
             </footer>
 
 
